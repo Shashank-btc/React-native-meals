@@ -1,4 +1,5 @@
 {
   "name": "meals",
-  "displayName": "meals"
+  "displayName": "meals",
+  "backgroundColor" :"#24180f"
 }
