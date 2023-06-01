@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: "bold",
     fontSize: 18,
+    fontFamily: 'Cochin',
   },
   buttomPressed: {
     opacity: 0.5
