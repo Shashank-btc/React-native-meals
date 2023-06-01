@@ -1,13 +1,30 @@
 import { BackHandler, Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 
-const MealItem = ({title, imageUrl, duration, complexcity, affordadility}) => {
+const MealItem = ({title, imageUrl, duration, complexcity, affordadility, ingredients, steps}) => {
+
+  const navigation = useNavigation();
+  function pressHandeler() {
+    console.log("ingredients is "+ingredients)
+    console.log("image is main "+imageUrl)
+    console.log("steps is "+steps)
+
+    navigation.navigate("MealDetails",
+    {
+      
+      imageUrl :imageUrl,
+      ingredients :ingredients,
+      steps : steps
+    })
+  }
   return (
     <View style={styles.mealsItem}>
       <Pressable 
       style={({ pressed }) =>
        (pressed ? 
-      styles.buttomPressed : null)}>
+      styles.buttomPressed : null)}
+      onPress={pressHandeler}>
         <View>
           <Image source={{uri: imageUrl}} style={styles.imageStyle}/>
       <Text style={styles.title}>{title}</Text>

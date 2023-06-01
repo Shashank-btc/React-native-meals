@@ -22,7 +22,6 @@ const CategoriesScreen = ({navigation}) => {
             navigation.navigate("MealsOverView",
             {
             categoryId : item.id,
-        
             });
         }
     

@@ -31,6 +31,8 @@ const MealsOverviewScreen = ({ route, navigation }) => {
         complexcity: item.complexity,
         affordadility: item.affordability,
         duration : item.duration,
+        ingredients : item.ingredients,
+        steps : item.steps
     }
 
     return(
