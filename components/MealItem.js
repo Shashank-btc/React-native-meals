@@ -15,7 +15,8 @@ const MealItem = ({title, imageUrl, duration, complexcity, affordadility, ingred
       
       imageUrl :imageUrl,
       ingredients :ingredients,
-      steps : steps
+      steps : steps,
+      title : title
     })
   }
   return (

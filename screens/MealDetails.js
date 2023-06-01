@@ -1,10 +1,17 @@
 import { Image, StyleSheet, Text, View ,FlatList } from 'react-native'
-import React from 'react'
+import { useEffect } from 'react'
 
-const MealDetails = ({route}) => {
+const MealDetails = ({route,navigation}) => {
 
     const val = route.params;
+    const title = route.params.title
     // console.log("image url is "+route.params.imageUrl)
+
+    useEffect(() =>{
+    navigation.setOptions({
+        title : title
+       })
+    })
   return (
     <View>
       <View style={styles.container}>
